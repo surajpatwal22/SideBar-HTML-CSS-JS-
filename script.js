@@ -8,9 +8,19 @@ const body = document.querySelector("body"),
 
       toggle.addEventListener('click',()=>{
         sidebar.classList.toggle("close");
-        console.log(toggle);
+        // console.log(toggle);
+      });
+
+      searchBtn.addEventListener('click',()=>{
+        sidebar.classList.remove("close");
+        // console.log(toggle);
       });
 
       modeSwitch.addEventListener('click',()=>{
         body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          modeText.innerHTML="Light Mode";
+        } else {
+          modeText.innerHTML="Dark Mode";
+        }
       });
